@@ -1,0 +1,6 @@
+/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/rebuild_cache.dir
+/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/edit_cache.dir
+/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/arduino-template.bin.dir
+/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/arduino-template.elf.dir
+/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/flash.dir
+/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/arduino-template.hex.dir

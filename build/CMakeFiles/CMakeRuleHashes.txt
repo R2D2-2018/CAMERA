@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+115039d73fa352fa4ea5670d9891b9f8 CMakeFiles/arduino-template.bin
+d88d205dfb996f446b7bc507b333975d CMakeFiles/arduino-template.hex
+20019b07782490c713cfb5d7cc2b490f CMakeFiles/flash
