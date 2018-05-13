@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief     Implementations for 2d vector class.
+ * @author    Jari van Dam
+ * @license   See LICENSE
+ */
 #include "vector-2d.hpp"
 
 int Vector2D::getX() {
