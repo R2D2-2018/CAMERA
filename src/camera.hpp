@@ -6,6 +6,7 @@
  */
 #ifndef CAMERA_HPP
 #define CAMERA_HPP
+#include "Image.hpp"
 #include "vector-2d.hpp"
 
 class Camera {
@@ -15,6 +16,9 @@ class Camera {
 
   public:
     Camera(){};
+
+    virtual Image takeImage() = 0;
+
     /**
      * @brief Set the desired resolution of the camera. Should be implemented
      * in the derived funcion.

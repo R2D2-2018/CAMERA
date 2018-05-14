@@ -6,10 +6,13 @@
  */
 #ifndef MOCK_HPP
 #define MOCK_HPP
+#include "Image.hpp"
 #include "camera.hpp"
 #include "vector-2d.hpp"
+
 class Mock : public Camera {
   public:
+    Image takeImage();
     /**
      * @brief Set the desired resolution as a vecotr2D.
      * [BLANK]

@@ -5,6 +5,12 @@
  * @license   See LICENSE
  */
 #include "mock.hpp"
+#include "Image.hpp"
+#include "camera.hpp"
+
+Image Mock::takeImage() {
+    return Image();
+}
 
 void Mock::setResolution(Vector2D inputResolution) {
     resolution = inputResolution;

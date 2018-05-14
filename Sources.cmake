@@ -31,4 +31,9 @@ set (sources
     src/camera.cpp
     src/vector-2d.cpp
     src/mock.cpp
+    src/Image.cpp
+    src/ColorPixel.cpp
+    src/ColorImage.cpp
+    src/GreyscalePixel.cpp
+    src/GreyscaleImage.cpp
 )
