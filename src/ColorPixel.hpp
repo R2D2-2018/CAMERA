@@ -1,5 +1,6 @@
 #ifndef COLORPIXEL_HPP
 #define COLORPIXEL_HPP
+#include "vector-2d.hpp"
 class ColorPixel
 {
 
