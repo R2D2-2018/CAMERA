@@ -5,7 +5,6 @@
  * @license   See LICENSE
  */
 #include "camera.hpp"
-#include "wrap-hwlib.hpp"
 
 Vector2D Camera::getResolution() {
     return resolution;

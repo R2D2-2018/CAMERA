@@ -1,14 +1,49 @@
 #define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do this in one cpp file
 #include "../src/vector-2d.cpp"
-#include "../src/vector-2d.hpp"
+
+#include "../src/Image.cpp"
 
 #include "../src/mock.cpp"
-#include "../src/mock.hpp"
 
 #include "../src/camera.cpp"
-#include "../src/camera.hpp"
 
 #include "catch.hpp"
+
+TEST_CASE("Vector2D operator == equal vectors") {
+    Vector2D vector1;
+    Vector2D vector2;
+    vector1.setX(5);
+    vector1.setY(8);
+
+    vector2.setX(5);
+    vector2.setY(8);
+
+    REQUIRE(vector1 == vector2);
+}
+
+TEST_CASE("Vector2D operator == unequal vectors on x coordinate") {
+    Vector2D vector1;
+    Vector2D vector2;
+    vector1.setX(5);
+    vector1.setY(8);
+
+    vector2.setX(1234);
+    vector2.setY(8);
+
+    REQUIRE_FALSE(vector1 == vector2);
+}
+
+TEST_CASE("Vector2D operator == unequal vectors on y coordinate") {
+    Vector2D vector1;
+    Vector2D vector2;
+    vector1.setX(5);
+    vector1.setY(8);
+
+    vector2.setX(5);
+    vector2.setY(9);
+
+    REQUIRE_FALSE(vector1 == vector2);
+}
 
 TEST_CASE("Vector2D set normal values") {
     Vector2D vector;

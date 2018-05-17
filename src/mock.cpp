@@ -9,7 +9,8 @@
 #include "camera.hpp"
 
 Image Mock::takeImage() {
-    return Image();
+    Image image;
+    return image;
 }
 
 void Mock::setResolution(Vector2D inputResolution) {

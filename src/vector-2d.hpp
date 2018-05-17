@@ -20,7 +20,7 @@ class Vector2D {
      * [BLANK]
      * @return X value of the vector.
      */
-    int getX();
+    int getX() const;
     /**
      * @brief Set the x value of the vector.
      * [BLANK]
@@ -36,7 +36,7 @@ class Vector2D {
      * [BLANK]
      * @return y value of the vector.
      */
-    int getY();
+    int getY() const;
     /**
      * @brief Set the y value of the vector.
      * [BLANK]
@@ -46,4 +46,6 @@ class Vector2D {
      */
     void setY(int inputY);
 };
+
+bool operator==(const Vector2D &lhs, const Vector2D &rhs);
 #endif // VECTOR_2D_HPP
