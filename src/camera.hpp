@@ -7,7 +7,7 @@
 #ifndef CAMERA_HPP
 #define CAMERA_HPP
 #include "Image.hpp"
-#include "vector-2d.hpp"
+#include "vector_2d.hpp"
 
 class Camera {
   protected:

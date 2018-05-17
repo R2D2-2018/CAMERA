@@ -4,7 +4,7 @@
  * @author    Jari van Dam
  * @license   See LICENSE
  */
-#include "vector-2d.hpp"
+#include "vector_2d.hpp"
 
 int Vector2D::getX() const {
     return x;

@@ -2,7 +2,7 @@
 
 #include "camera.hpp"
 #include "mock.hpp"
-#include "vector-2d.hpp"
+#include "vector_2d.hpp"
 int main() {
     WDT->WDT_MR = WDT_MR_WDDIS;
 

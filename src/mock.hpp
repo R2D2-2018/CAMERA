@@ -8,7 +8,7 @@
 #define MOCK_HPP
 #include "Image.hpp"
 #include "camera.hpp"
-#include "vector-2d.hpp"
+#include "vector_2d.hpp"
 
 class Mock : public Camera {
   public:
