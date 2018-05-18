@@ -5,8 +5,8 @@
  * @license   See LICENSE
  */
 #include "mock.hpp"
-#include "Image.hpp"
 #include "camera.hpp"
+#include "image.hpp"
 
 Image Mock::takeImage() {
     Image image;

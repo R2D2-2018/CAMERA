@@ -6,7 +6,7 @@
  */
 #ifndef CAMERA_HPP
 #define CAMERA_HPP
-#include "Image.hpp"
+#include "image.hpp"
 #include "vector_2d.hpp"
 
 class Camera {
