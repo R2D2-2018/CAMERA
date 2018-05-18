@@ -1,4 +1,4 @@
-#include "ColorPixel.hpp"
+#include "color_pixel.hpp"
 
 
 

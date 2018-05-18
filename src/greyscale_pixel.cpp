@@ -1,4 +1,4 @@
-#include "GreyscalePixel.hpp"
+#include "greyscale_pixel.hpp"
 
 void GreyscalePixel::setPixel(int Inputvalue) {
     pixelValue = Inputvalue;

@@ -6,10 +6,10 @@
  * @author    Ruben Rajan
  * @license   See LICENSE
  */
-#ifndef COLORIMAGE_HPP
-#define COLORIMAGE_HPP
-#include "ColorPixel.hpp"
-#include "Image.hpp"
+#ifndef COLOR_IMAGE_HPP
+#define COLOR_IMAGE_HPP
+#include "color_pixel.hpp"
+#include "image.hpp"
 #include "vector_2d.hpp"
 class ColorImage : public Image {
   private:
@@ -17,18 +17,18 @@ class ColorImage : public Image {
 
   public:
     /**
-     * @brief Short description of foo
-     *
-     * fucntion to set the value in color of the given pixel with vector cordinates
-     *
+     * @brief fucntion to set the intesity of a pixel
+     *[blank]
+    * fucntion to set the value in color of the given pixel with vector cordinates
+     *[blank]
      * @param[in]	position	the coordinates of the pixel that will be set
      * @param[in]	value		the new color value of the pixel
      */
     void setPixel(Vector2D position, ColorPixel value);
     /**
-     * @brief Short description of foo
+     * @brief get pixel value
      *
-     * get the value of one pixel
+     * get the value of one pixel at a specific location
      *
      * @param[in]     position    vector cordinates of the pixel
      * @return the color value of the pixel
@@ -36,4 +36,4 @@ class ColorImage : public Image {
     ColorPixel getPixel(Vector2D position);
 };
 
-#endif // COLORIMAGE_HPP
+#endif // COLOR_IMAGE_HPP

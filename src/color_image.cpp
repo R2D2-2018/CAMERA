@@ -1,4 +1,4 @@
-#include "ColorImage.hpp"
+#include "color_image.hpp"
 
 void ColorImage::setPixel(Vector2D position, ColorPixel value) {
     pixels[position.getX()][position.getY()] = value;

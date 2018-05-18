@@ -1,4 +1,4 @@
-#include "GreyscaleImage.hpp"
+#include "greyscale_image.hpp"
 
 void GreyscaleImage::setPixel(Vector2D position, GreyscalePixel value) {
     pixels[position.getX()][position.getY()] = value;

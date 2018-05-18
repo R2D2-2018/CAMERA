@@ -1,7 +1,7 @@
 The target system is: Generic -  - 
-The host system is: Linux - 4.16.4-1-ARCH - x86_64
+The host system is: Windows - 10.0.16299 - AMD64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/arm-none-eabi-g++ 
+Compiler: C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-g++.exe 
 Build flags: 
 Id flags: -c 
 
@@ -11,39 +11,39 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
 
-The CXX compiler identification is GNU, found in "/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/3.10.3/CompilerIdCXX/CMakeCXXCompilerId.o"
+The CXX compiler identification is GNU, found in "C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/3.11.1/CompilerIdCXX/CMakeCXXCompilerId.o"
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_37a69/fast"
-/usr/bin/make -f CMakeFiles/cmTC_37a69.dir/build.make CMakeFiles/cmTC_37a69.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_37a69.dir/CMakeCXXCompilerABI.cpp.obj
-/usr/bin/arm-none-eabi-g++     -o CMakeFiles/cmTC_37a69.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX static library libcmTC_37a69.a
-/usr/bin/cmake -P CMakeFiles/cmTC_37a69.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37a69.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_37a69.a  CMakeFiles/cmTC_37a69.dir/CMakeCXXCompilerABI.cpp.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_37a69.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_132a6/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_132a6.dir/build.make CMakeFiles/cmTC_132a6.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_132a6.dir/CMakeCXXCompilerABI.cpp.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-g++.exe"     -o CMakeFiles/cmTC_132a6.dir/CMakeCXXCompilerABI.cpp.obj -c "/C/Program Files/CMake/share/cmake-3.11/Modules/CMakeCXXCompilerABI.cpp"
+Linking CXX static library libcmTC_132a6.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_132a6.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_132a6.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_132a6.a  CMakeFiles/cmTC_132a6.dir/CMakeCXXCompilerABI.cpp.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_132a6.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(arm-none-eabi-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_37a69/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_37a69.dir/build.make CMakeFiles/cmTC_37a69.dir/build]
-  ignore line: [make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_37a69.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [/usr/bin/arm-none-eabi-g++     -o CMakeFiles/cmTC_37a69.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX static library libcmTC_37a69.a]
-  ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_37a69.dir/cmake_clean_target.cmake]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37a69.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/arm-none-eabi-ar qc libcmTC_37a69.a  CMakeFiles/cmTC_37a69.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [/usr/bin/arm-none-eabi-ranlib libcmTC_37a69.a]
-  ignore line: [make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
+  ignore line: [Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_132a6/fast"]
+  ignore line: [C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_132a6.dir/build.make CMakeFiles/cmTC_132a6.dir/build]
+  ignore line: [make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_132a6.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: ["/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-g++.exe"     -o CMakeFiles/cmTC_132a6.dir/CMakeCXXCompilerABI.cpp.obj -c "/C/Program Files/CMake/share/cmake-3.11/Modules/CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX static library libcmTC_132a6.a]
+  ignore line: ["/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_132a6.dir/cmake_clean_target.cmake]
+  ignore line: ["/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_132a6.dir/link.txt --verbose=1]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_132a6.a  CMakeFiles/cmTC_132a6.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_132a6.a]
+  ignore line: [make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
   ignore line: []
   implicit libs: []
   implicit dirs: []
@@ -53,19 +53,19 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8f64e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8f64e.dir/build.make CMakeFiles/cmTC_8f64e.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8f64e.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-g++    -std=c++1z -o CMakeFiles/cmTC_8f64e.dir/feature_tests.cxx.obj -c /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
-Linking CXX static library libcmTC_8f64e.a
-/usr/bin/cmake -P CMakeFiles/cmTC_8f64e.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f64e.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_8f64e.a  CMakeFiles/cmTC_8f64e.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_8f64e.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_caed7/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_caed7.dir/build.make CMakeFiles/cmTC_caed7.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_caed7.dir/feature_tests.cxx.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-g++.exe"    -std=c++1z -o CMakeFiles/cmTC_caed7.dir/feature_tests.cxx.obj -c /C/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_caed7.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_caed7.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_caed7.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_caed7.a  CMakeFiles/cmTC_caed7.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_caed7.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -128,19 +128,19 @@ make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d8289/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d8289.dir/build.make CMakeFiles/cmTC_d8289.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d8289.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-g++    -std=c++14 -o CMakeFiles/cmTC_d8289.dir/feature_tests.cxx.obj -c /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
-Linking CXX static library libcmTC_d8289.a
-/usr/bin/cmake -P CMakeFiles/cmTC_d8289.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8289.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_d8289.a  CMakeFiles/cmTC_d8289.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_d8289.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_7fef7/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_7fef7.dir/build.make CMakeFiles/cmTC_7fef7.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7fef7.dir/feature_tests.cxx.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-g++.exe"    -std=c++14 -o CMakeFiles/cmTC_7fef7.dir/feature_tests.cxx.obj -c /C/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_7fef7.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_7fef7.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_7fef7.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_7fef7.a  CMakeFiles/cmTC_7fef7.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_7fef7.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -203,19 +203,19 @@ make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d4917/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d4917.dir/build.make CMakeFiles/cmTC_d4917.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d4917.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-g++    -std=c++11 -o CMakeFiles/cmTC_d4917.dir/feature_tests.cxx.obj -c /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
-Linking CXX static library libcmTC_d4917.a
-/usr/bin/cmake -P CMakeFiles/cmTC_d4917.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4917.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_d4917.a  CMakeFiles/cmTC_d4917.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_d4917.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_3d14e/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_3d14e.dir/build.make CMakeFiles/cmTC_3d14e.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3d14e.dir/feature_tests.cxx.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-g++.exe"    -std=c++11 -o CMakeFiles/cmTC_3d14e.dir/feature_tests.cxx.obj -c /C/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_3d14e.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_3d14e.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_3d14e.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_3d14e.a  CMakeFiles/cmTC_3d14e.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_3d14e.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -278,19 +278,19 @@ make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3da82/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3da82.dir/build.make CMakeFiles/cmTC_3da82.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3da82.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-g++    -std=c++98 -o CMakeFiles/cmTC_3da82.dir/feature_tests.cxx.obj -c /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
-Linking CXX static library libcmTC_3da82.a
-/usr/bin/cmake -P CMakeFiles/cmTC_3da82.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3da82.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_3da82.a  CMakeFiles/cmTC_3da82.dir/feature_tests.cxx.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_3da82.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_5b799/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_5b799.dir/build.make CMakeFiles/cmTC_5b799.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5b799.dir/feature_tests.cxx.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-g++.exe"    -std=c++98 -o CMakeFiles/cmTC_5b799.dir/feature_tests.cxx.obj -c /C/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.cxx
+Linking CXX static library libcmTC_5b799.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_5b799.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_5b799.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_5b799.a  CMakeFiles/cmTC_5b799.dir/feature_tests.cxx.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_5b799.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -351,13 +351,13 @@ make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
-arm-none-eabi-gcc (Arch Repository) 7.3.0
-Copyright (C) 2017 Free Software Foundation, Inc.
+arm-none-eabi-gcc.exe (GNU Tools for ARM Embedded Processors) 6.2.1 20161205 (release) [ARM/embedded-6-branch revision 243739]
+Copyright (C) 2016 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /usr/bin/arm-none-eabi-gcc 
+Compiler: C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-gcc.exe 
 Build flags: 
 Id flags: -c 
 
@@ -367,39 +367,39 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is GNU, found in "/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/3.10.3/CompilerIdC/CMakeCCompilerId.o"
+The C compiler identification is GNU, found in "C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/3.11.1/CompilerIdC/CMakeCCompilerId.o"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1ed5b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1ed5b.dir/build.make CMakeFiles/cmTC_1ed5b.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1ed5b.dir/CMakeCCompilerABI.c.obj
-/usr/bin/arm-none-eabi-gcc    -o CMakeFiles/cmTC_1ed5b.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C static library libcmTC_1ed5b.a
-/usr/bin/cmake -P CMakeFiles/cmTC_1ed5b.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ed5b.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_1ed5b.a  CMakeFiles/cmTC_1ed5b.dir/CMakeCCompilerABI.c.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_1ed5b.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_41b94/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_41b94.dir/build.make CMakeFiles/cmTC_41b94.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_41b94.dir/CMakeCCompilerABI.c.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-gcc.exe"    -o CMakeFiles/cmTC_41b94.dir/CMakeCCompilerABI.c.obj   -c "/C/Program Files/CMake/share/cmake-3.11/Modules/CMakeCCompilerABI.c"
+Linking C static library libcmTC_41b94.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_41b94.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_41b94.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_41b94.a  CMakeFiles/cmTC_41b94.dir/CMakeCCompilerABI.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_41b94.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(arm-none-eabi-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1ed5b/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_1ed5b.dir/build.make CMakeFiles/cmTC_1ed5b.dir/build]
-  ignore line: [make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_1ed5b.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [/usr/bin/arm-none-eabi-gcc    -o CMakeFiles/cmTC_1ed5b.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C static library libcmTC_1ed5b.a]
-  ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_1ed5b.dir/cmake_clean_target.cmake]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ed5b.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/arm-none-eabi-ar qc libcmTC_1ed5b.a  CMakeFiles/cmTC_1ed5b.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [/usr/bin/arm-none-eabi-ranlib libcmTC_1ed5b.a]
-  ignore line: [make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
+  ignore line: [Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_41b94/fast"]
+  ignore line: [C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_41b94.dir/build.make CMakeFiles/cmTC_41b94.dir/build]
+  ignore line: [make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_41b94.dir/CMakeCCompilerABI.c.obj]
+  ignore line: ["/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-gcc.exe"    -o CMakeFiles/cmTC_41b94.dir/CMakeCCompilerABI.c.obj   -c "/C/Program Files/CMake/share/cmake-3.11/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Linking C static library libcmTC_41b94.a]
+  ignore line: ["/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_41b94.dir/cmake_clean_target.cmake]
+  ignore line: ["/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_41b94.dir/link.txt --verbose=1]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_41b94.a  CMakeFiles/cmTC_41b94.dir/CMakeCCompilerABI.c.obj]
+  ignore line: ["C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_41b94.a]
+  ignore line: [make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp']
   ignore line: []
   implicit libs: []
   implicit dirs: []
@@ -409,19 +409,19 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4bda4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4bda4.dir/build.make CMakeFiles/cmTC_4bda4.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4bda4.dir/feature_tests.c.obj
-/usr/bin/arm-none-eabi-gcc   -std=c11 -o CMakeFiles/cmTC_4bda4.dir/feature_tests.c.obj   -c /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.c
-Linking C static library libcmTC_4bda4.a
-/usr/bin/cmake -P CMakeFiles/cmTC_4bda4.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bda4.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_4bda4.a  CMakeFiles/cmTC_4bda4.dir/feature_tests.c.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_4bda4.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_1fb20/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_1fb20.dir/build.make CMakeFiles/cmTC_1fb20.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1fb20.dir/feature_tests.c.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-gcc.exe"   -std=c11 -o CMakeFiles/cmTC_1fb20.dir/feature_tests.c.obj   -c /C/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_1fb20.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_1fb20.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_1fb20.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_1fb20.a  CMakeFiles/cmTC_1fb20.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_1fb20.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -431,19 +431,19 @@ make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bdd3f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bdd3f.dir/build.make CMakeFiles/cmTC_bdd3f.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bdd3f.dir/feature_tests.c.obj
-/usr/bin/arm-none-eabi-gcc   -std=c99 -o CMakeFiles/cmTC_bdd3f.dir/feature_tests.c.obj   -c /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.c
-Linking C static library libcmTC_bdd3f.a
-/usr/bin/cmake -P CMakeFiles/cmTC_bdd3f.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bdd3f.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_bdd3f.a  CMakeFiles/cmTC_bdd3f.dir/feature_tests.c.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_bdd3f.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_73060/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_73060.dir/build.make CMakeFiles/cmTC_73060.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73060.dir/feature_tests.c.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-gcc.exe"   -std=c99 -o CMakeFiles/cmTC_73060.dir/feature_tests.c.obj   -c /C/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_73060.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_73060.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_73060.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_73060.a  CMakeFiles/cmTC_73060.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_73060.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -453,19 +453,19 @@ make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
+Change Dir: C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f2987/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f2987.dir/build.make CMakeFiles/cmTC_f2987.dir/build
-make[1]: Entering directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f2987.dir/feature_tests.c.obj
-/usr/bin/arm-none-eabi-gcc   -std=c90 -o CMakeFiles/cmTC_f2987.dir/feature_tests.c.obj   -c /home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.c
-Linking C static library libcmTC_f2987.a
-/usr/bin/cmake -P CMakeFiles/cmTC_f2987.dir/cmake_clean_target.cmake
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2987.dir/link.txt --verbose=1
-/usr/bin/arm-none-eabi-ar qc libcmTC_f2987.a  CMakeFiles/cmTC_f2987.dir/feature_tests.c.obj
-/usr/bin/arm-none-eabi-ranlib libcmTC_f2987.a
-make[1]: Leaving directory '/home/jari/HU/R2D2/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Run Build Command:"C:/MinGW/bin/make.exe" "cmTC_183f2/fast"
+C:/MinGW/bin/make.exe -f CMakeFiles/cmTC_183f2.dir/build.make CMakeFiles/cmTC_183f2.dir/build
+make.exe[1]: Entering directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_183f2.dir/feature_tests.c.obj
+"/C/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-gcc.exe"   -std=c90 -o CMakeFiles/cmTC_183f2.dir/feature_tests.c.obj   -c /C/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/feature_tests.c
+Linking C static library libcmTC_183f2.a
+"/C/Program Files/CMake/bin/cmake.exe" -P CMakeFiles/cmTC_183f2.dir/cmake_clean_target.cmake
+"/C/Program Files/CMake/bin/cmake.exe" -E cmake_link_script CMakeFiles/cmTC_183f2.dir/link.txt --verbose=1
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ar.exe" qc libcmTC_183f2.a  CMakeFiles/cmTC_183f2.dir/feature_tests.c.obj
+"C:/Program Files (x86)/GNU Tools ARM Embedded/6.2 2016q4/bin/arm-none-eabi-ranlib.exe" libcmTC_183f2.a
+make.exe[1]: Leaving directory 'C:/ti-software/Build-environment/modules/CAMERA/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
