@@ -6,10 +6,20 @@
  */
 #include "mock.hpp"
 #include "camera.hpp"
+#include "greyscale_pixel.hpp"
 #include "image.hpp"
-
-Image Mock::takeImage() {
-    Image image;
+Image<GreyscalePixel> Mock::takeImage() {
+    Image<GreyscalePixel> image;
+    Vector2D position;
+    GreyscalePixel value;
+    value.setPixel(10);
+    for (int i = 0; i < 10; i++) {
+        position.setX(i);
+        for (int j = 0; j < 10; j++) {
+            position.setY(j);
+            image.setPixel(position, value);
+        }
+    }
     return image;
 }
 

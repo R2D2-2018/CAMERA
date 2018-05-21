@@ -1,11 +1,11 @@
 #define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do this in one cpp file
 #include "../src/vector_2d.cpp"
 
-#include "../src/image.cpp"
-
 #include "../src/mock.cpp"
 
 #include "../src/camera.cpp"
+
+#include "../src/greyscale_pixel.cpp"
 
 #include "catch.hpp"
 

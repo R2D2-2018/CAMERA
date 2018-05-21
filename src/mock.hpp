@@ -7,12 +7,12 @@
 #ifndef MOCK_HPP
 #define MOCK_HPP
 #include "camera.hpp"
+#include "greyscale_pixel.hpp"
 #include "image.hpp"
 #include "vector_2d.hpp"
-
 class Mock : public Camera {
   public:
-    Image takeImage();
+    Image<GreyscalePixel> takeImage();
     /**
      * @brief Set the desired resolution as a vecotr2D.
      * [BLANK]

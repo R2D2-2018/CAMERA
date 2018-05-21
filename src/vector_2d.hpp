@@ -14,6 +14,22 @@ class Vector2D {
 
   public:
     /**
+     * @brief Default constructor for Vector2D.
+     * [BLANK]
+     *  Initializes with x and y set to 0.
+     * [BLANK]
+     */
+    Vector2D();
+    /**
+     * @brief Vector2d constructor with x and y value.
+     * [BLANK]
+     *
+     * [BLANK]
+     * @param[in]     x    X value
+     * @param[in]     y    Y value
+     */
+    Vector2D(const int x, const int y);
+    /**
      * @brief Return the x coordinate.
      * [BLANK]
      *

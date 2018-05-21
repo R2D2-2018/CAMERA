@@ -6,25 +6,25 @@
  */
 #ifndef GREYSCALE_PIXEL_HPP
 #define GREYSCALE_PIXEL_HPP
-class GreyscalePixel
-{
+class GreyscalePixel {
 
-private:
-	int pixelValue;
-public:
-	GreyscalePixel();
-	/**
-	 * @brief set the intesity of the pixel
-	 * [BLANK]
-	 * @param[in]     valueOfPixel    new value of pixel
-	 */
-	void setPixel(int valueOfPixel);
-	/**
-	 * @brief return blue intesity of the pixel
-	 * [BLANK]
-	 * @return blue intesity of the pixel
-	 */
-	int getPixel();
+  private:
+    int pixelValue = 0;
+
+  public:
+    GreyscalePixel();
+    /**
+     * @brief set the intesity of the pixel
+     * [BLANK]
+     * @param[in]     valueOfPixel    new value of pixel
+     */
+    void setPixel(int valueOfPixel);
+    /**
+     * @brief return blue intesity of the pixel
+     * [BLANK]
+     * @return blue intesity of the pixel
+     */
+    int getPixel();
 };
 
 #endif // GREYSCALE_PIXEL_HPP

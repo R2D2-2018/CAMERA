@@ -1,14 +1,14 @@
 /**
  * @file
- * @brief     Implementation for virtual class cCmera.
+ * @brief     Implementation for virtual class Camera.
  * @author    Jari van Dam
  * @license   See LICENSE
  */
 #ifndef CAMERA_HPP
 #define CAMERA_HPP
+#include "greyscale_pixel.hpp"
 #include "image.hpp"
 #include "vector_2d.hpp"
-
 class Camera {
   protected:
     int fps = 0;
@@ -16,8 +16,7 @@ class Camera {
 
   public:
     Camera(){};
-
-    virtual Image takeImage() = 0;
+    virtual Image<GreyscalePixel> takeImage() = 0;
 
     /**
      * @brief Set the desired resolution of the camera. Should be implemented
