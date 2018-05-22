@@ -28,4 +28,9 @@ set (sources
     src/wrap-hwlib.cpp
     src/libc-stub.cpp
     src/main.cpp
+    src/camera.cpp
+    src/vector_2d.cpp
+    src/mock.cpp
+    src/color_pixel.cpp
+    src/greyscale_pixel.cpp
 )
