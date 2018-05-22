@@ -24,7 +24,7 @@ int main() {
 
     camera.setFPS(421);
 
-    auto image = camera.takeImage();
+    auto image = camera.takeGreyImage();
 
     Vector2D position(5, 10);
 

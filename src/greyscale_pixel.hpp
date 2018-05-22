@@ -24,7 +24,7 @@ class GreyscalePixel {
      * [BLANK]
      * @return blue intesity of the pixel
      */
-    int getPixel();
+    int getPixel() const;
 };
 
 #endif // GREYSCALE_PIXEL_HPP

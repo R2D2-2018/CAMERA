@@ -7,12 +7,13 @@
 #ifndef MOCK_HPP
 #define MOCK_HPP
 #include "camera.hpp"
+#include "color_pixel.hpp"
 #include "greyscale_pixel.hpp"
 #include "image.hpp"
 #include "vector_2d.hpp"
 class Mock : public Camera {
   public:
-    Image<GreyscalePixel> takeImage();
+    Image<GreyscalePixel> takeGreyImage();
     /**
      * @brief Set the desired resolution as a vecotr2D.
      * [BLANK]
@@ -20,6 +21,7 @@ class Mock : public Camera {
      * [BLANK]
      * @param[in]     inputResolution  The desired resolution as a Vector@d.
      */
+    Image<ColorPixel> takeColorImage();
     void setResolution(Vector2D inputResolution);
     /**
      * @brief Set the desired FPS.

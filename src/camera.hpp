@@ -6,6 +6,7 @@
  */
 #ifndef CAMERA_HPP
 #define CAMERA_HPP
+#include "color_pixel.hpp"
 #include "greyscale_pixel.hpp"
 #include "image.hpp"
 #include "vector_2d.hpp"
@@ -16,8 +17,8 @@ class Camera {
 
   public:
     Camera(){};
-    virtual Image<GreyscalePixel> takeImage() = 0;
-
+    virtual Image<GreyscalePixel> takeGreyImage() = 0;
+    virtual Image<ColorPixel> takeColorImage() = 0;
     /**
      * @brief Set the desired resolution of the camera. Should be implemented
      * in the derived funcion.

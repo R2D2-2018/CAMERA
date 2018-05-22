@@ -1,16 +1,19 @@
 #define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do this in one cpp file
-#include "../src/vector_2d.cpp"
-#include "../src/mock.cpp"
 #include "../src/camera.cpp"
-#include "../src/greyscale_pixel.cpp"
-#include "../src/vector_2d.cpp"
-#include "../src/color_image.cpp"
 #include "../src/color_pixel.cpp"
-#include "../src/greyscale_image.cpp"
 #include "../src/greyscale_pixel.cpp"
+#include "../src/image.hpp"
+#include "../src/mock.cpp"
+#include "../src/vector_2d.cpp"
 
 #include "catch.hpp"
 
+TEST_CASE("Vector2D construct with x and y") {
+    Vector2D vector(99, 21);
+
+    REQUIRE(vector.getX() == 99);
+    REQUIRE(vector.getY() == 21);
+}
 TEST_CASE("Vector2D operator == equal vectors") {
     Vector2D vector1;
     Vector2D vector2;
@@ -104,32 +107,32 @@ TEST_CASE("Camera mock set negative values") {
     REQUIRE(camera.getFPS() == -30);
 }
 
-TEST_CASE( "testing colorImage" ) {
-    ColorImage kleurplaatje;
-    ColorPixel redPixel;
-    redPixel.setRed(127);
-    Vector2D coordinate;
-    coordinate.setX(120);
-    coordinate.setY(125);
-    kleurplaatje.setPixel(coordinate, redPixel);
-    ColorPixel testPixel;
-    testPixel.setRed(127);
-    REQUIRE(kleurplaatje.getPixel(2,2) == testPixel);
-    testPixel.setGreen(200);
-    REQUIRE_FALSE(kleurplaatje.getPixel(coordinate) == testPixel);
-}
+// TEST_CASE("testing colorImage") {
+//     Image<ColorPixel> kleurplaatje;
+//     ColorPixel redPixel;
+//     redPixel.setRed(127);
+//     Vector2D coordinate;
+//     coordinate.setX(120);
+//     coordinate.setY(125);
+//     kleurplaatje.setPixel(coordinate, redPixel);
+//     ColorPixel testPixel;
+//     testPixel.setRed(127);
+//     REQUIRE(kleurplaatje.getPixel(coordinate) == testPixel);
+//     testPixel.setGreen(200);
+//     REQUIRE_FALSE(kleurplaatje.getPixel(coordinate) == testPixel);
+// }
 
-TEST_CASE( "testing colorImage" ) {
-    ColorImage image;
+TEST_CASE("testing colorImage2") {
+    Image<GreyscalePixel> image;
     GreyscalePixel pixel;
-    pixel.set(95);
+    pixel.setPixel(95);
     Vector2D coordinate;
     coordinate.setX(120);
     coordinate.setY(125);
-    kleurplaatje.setPixel(pixel);
-    pixel testPixel;
-    testPixel.set(95);
-    REQUIRE(image.getPixel(2,2) == testPixel);
-    testPixel.set(200);
-    REQUIRE_FALSE(kleurplaatje.getPixel(coordinate) == testPixel);
+    image.setPixel(coordinate, pixel);
+    GreyscalePixel testPixel;
+    testPixel.setPixel(95);
+    REQUIRE(image.getPixel(coordinate) == testPixel);
+    testPixel.setPixel(200);
+    REQUIRE_FALSE(image.getPixel(coordinate) == testPixel);
 }

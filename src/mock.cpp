@@ -8,7 +8,7 @@
 #include "camera.hpp"
 #include "greyscale_pixel.hpp"
 #include "image.hpp"
-Image<GreyscalePixel> Mock::takeImage() {
+Image<GreyscalePixel> Mock::takeGreyImage() {
     Image<GreyscalePixel> image;
     Vector2D position;
     GreyscalePixel value;
@@ -22,7 +22,10 @@ Image<GreyscalePixel> Mock::takeImage() {
     }
     return image;
 }
-
+Image<ColorPixel> Mock::takeColorImage() {
+    Image<ColorPixel> image;
+    return image;
+}
 void Mock::setResolution(Vector2D inputResolution) {
     resolution = inputResolution;
 }
