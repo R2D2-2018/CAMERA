@@ -107,28 +107,28 @@ TEST_CASE("Camera mock set negative values") {
     REQUIRE(camera.getFPS() == -30);
 }
 
-// TEST_CASE("testing colorImage") {
-//     Image<ColorPixel> kleurplaatje;
-//     ColorPixel redPixel;
-//     redPixel.setRed(127);
-//     Vector2D coordinate;
-//     coordinate.setX(120);
-//     coordinate.setY(125);
-//     kleurplaatje.setPixel(coordinate, redPixel);
-//     ColorPixel testPixel;
-//     testPixel.setRed(127);
-//     REQUIRE(kleurplaatje.getPixel(coordinate) == testPixel);
-//     testPixel.setGreen(200);
-//     REQUIRE_FALSE(kleurplaatje.getPixel(coordinate) == testPixel);
-// }
+TEST_CASE("testing colorImage") {
+    Image<ColorPixel> colorimage;
+    ColorPixel redPixel;
+    redPixel.setRed(127);
+    Vector2D coordinate;
+    coordinate.setX(10);
+    coordinate.setY(10);
+    colorimage.setPixel(coordinate, redPixel);
+    ColorPixel testPixel;
+    testPixel.setRed(127);
+    REQUIRE(colorimage.getPixel(coordinate) == testPixel);
+    testPixel.setGreen(200);
+    REQUIRE_FALSE(colorimage.getPixel(coordinate) == testPixel);
+}
 
-TEST_CASE("testing colorImage2") {
+TEST_CASE("testing GreyscaleImage") {
     Image<GreyscalePixel> image;
     GreyscalePixel pixel;
     pixel.setPixel(95);
     Vector2D coordinate;
-    coordinate.setX(120);
-    coordinate.setY(125);
+    coordinate.setX(5);
+    coordinate.setY(8);
     image.setPixel(coordinate, pixel);
     GreyscalePixel testPixel;
     testPixel.setPixel(95);
