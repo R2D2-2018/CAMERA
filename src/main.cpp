@@ -4,6 +4,7 @@
 #include "greyscale_pixel.hpp"
 #include "image.hpp"
 #include "mock.hpp"
+#include "ov7670.hpp"
 #include "vector_2d.hpp"
 extern "C" void __cxa_pure_virtual() {
 
@@ -18,7 +19,7 @@ int main() {
     Vector2D resolution;
     resolution.setX(100);
     resolution.setY(150);
-    Mock camera;
+    OV7670 camera;
     camera.setFPS(5);
     camera.setResolution(resolution);
 
