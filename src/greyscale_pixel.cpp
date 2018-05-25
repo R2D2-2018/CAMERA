@@ -1,4 +1,5 @@
 #include "greyscale_pixel.hpp"
+#include "ycbcr.hpp"
 GreyscalePixel::GreyscalePixel() {
     pixelValue = 0;
 }

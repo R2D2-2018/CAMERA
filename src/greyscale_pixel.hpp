@@ -6,6 +6,7 @@
  */
 #ifndef GREYSCALE_PIXEL_HPP
 #define GREYSCALE_PIXEL_HPP
+#include "ycbcr.hpp"
 class GreyscalePixel {
 
   private:
@@ -25,6 +26,15 @@ class GreyscalePixel {
      * @return blue intesity of the pixel
      */
     int getPixel() const;
+    /**
+     * @brief Convert a YCbCr pixel to a GreyscalePixel
+     * [BLANK]
+     *
+     * [BLANK]
+     * @param[in]    YCbCr &rhs Reference to the YCbCr pixel.
+     * @return Greyscale pixel with the greyscale value of the YCbCr pixel
+     */
+    GreyscalePixel operator=(const YCbCr &rhs);
 };
 
 #endif // GREYSCALE_PIXEL_HPP

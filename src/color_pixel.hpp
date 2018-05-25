@@ -50,5 +50,14 @@ class ColorPixel {
      */
     int getGreen() const;
 };
-
+/**
+ * @brief Operator== for two color pixels
+ * [BLANK]
+ *
+ * [BLANK]
+ * @param[in]     &lhs One colorpixel to compare.
+ * @param[in]     &rhs One colorpixel to compare/
+ * @return True if equal, else false.
+ */
+bool operator==(const ColorPixel &lhs, const ColorPixel &rhs);
 #endif // COLOR_PIXEL_HPP
