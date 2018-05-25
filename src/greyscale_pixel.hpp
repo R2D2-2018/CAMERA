@@ -34,7 +34,7 @@ class GreyscalePixel {
      * @param[in]    YCbCr &rhs Reference to the YCbCr pixel.
      * @return Greyscale pixel with the greyscale value of the YCbCr pixel
      */
-    GreyscalePixel operator=(const YCbCr &rhs);
+    GreyscalePixel &operator=(const YCbCr &rhs);
 };
-
+bool operator==(const GreyscalePixel &lhs, const GreyscalePixel &rhs);
 #endif // GREYSCALE_PIXEL_HPP

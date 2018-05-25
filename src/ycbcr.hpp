@@ -4,18 +4,18 @@
 #include "image.hpp"
 class YCbCr {
   private:
-    int y;
-    int cb;
-    int cr;
+    int y = 0;
+    int cb = 0;
+    int cr = 0;
 
   public:
     YCbCr();
-    YCbCr(int y, int cb, int cr);
-    void setY(int y);
+    YCbCr(int in_y, int in_cb, int in_cr);
+    void setY(int in_y);
     int getY() const;
-    void setCb(int cb);
+    void setCb(int in_cb);
     int getCb() const;
-    void setCr(int cr);
+    void setCr(int in_cr);
     int getCr() const;
 };
 #endif // YCBCR_HPP

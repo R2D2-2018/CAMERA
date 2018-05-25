@@ -2,30 +2,30 @@
 YCbCr::YCbCr() {
     ;
 }
-YCbCr::YCbCr(int y, int cb, int cr) {
-    y = y;
-    cb = cb;
-    cr = cr;
+YCbCr::YCbCr(int in_y, int in_cb, int in_cr) {
+    y = in_y;
+    cb = in_cb;
+    cr = in_cr;
 }
 
-void YCbCr::setY(int y) {
-    y = y;
+void YCbCr::setY(int in_y) {
+    y = in_y;
 }
 
 int YCbCr::getY() const {
     return y;
 }
 
-void YCbCr::setCb(int cb) {
-    cb = cb;
+void YCbCr::setCb(int in_cb) {
+    cb = in_cb;
 }
 
 int YCbCr::getCb() const {
     return cb;
 }
 
-void YCbCr::setCr(int cr) {
-    cr = cr;
+void YCbCr::setCr(int in_cr) {
+    cr = in_cr;
 }
 
 int YCbCr::getCr() const {

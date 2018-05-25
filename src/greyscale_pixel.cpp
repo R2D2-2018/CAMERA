@@ -10,6 +10,10 @@ void GreyscalePixel::setPixel(int Inputvalue) {
 int GreyscalePixel::getPixel() const {
     return pixelValue;
 }
+GreyscalePixel &GreyscalePixel::operator=(const YCbCr &rhs) {
+    setPixel(rhs.getY());
+    return *this;
+}
 
 bool operator==(const GreyscalePixel &lhs, const GreyscalePixel &rhs) {
     if (lhs.getPixel() == rhs.getPixel()) {

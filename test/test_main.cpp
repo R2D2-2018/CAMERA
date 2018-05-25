@@ -5,7 +5,7 @@
 #include "../src/image.hpp"
 #include "../src/mock.cpp"
 #include "../src/vector_2d.cpp"
-
+#include "../src/ycbcr.cpp"
 #include "catch.hpp"
 
 TEST_CASE("Vector2D construct with x and y") {
@@ -135,4 +135,38 @@ TEST_CASE("testing GreyscaleImage") {
     REQUIRE(image.getPixel(coordinate) == testPixel);
     testPixel.setPixel(200);
     REQUIRE_FALSE(image.getPixel(coordinate) == testPixel);
+}
+
+TEST_CASE("YCbCr default constructor", "[YCbCr]") {
+    YCbCr image;
+    image.setY(10);
+    image.setCb(12);
+    image.setCr(18);
+
+    REQUIRE(image.getY() == 10);
+    REQUIRE(image.getCb() == 12);
+    REQUIRE(image.getCr() == 18);
+}
+
+TEST_CASE("YCbCr constructor with values", "[YCbCr]") {
+    YCbCr image(5, 21, 231);
+
+    REQUIRE(image.getY() == 5);
+    REQUIRE(image.getCb() == 21);
+    REQUIRE(image.getCr() == 231);
+}
+
+TEST_CASE("Greypixel defautl constructor") {
+    GreyscalePixel greyPixel;
+    greyPixel.setPixel(12);
+
+    REQUIRE(greyPixel.getPixel() == 12);
+}
+TEST_CASE("YCbCr to Greyscale conversion", "[YCbCr],[Greyscale]") {
+    YCbCr ycbcrPixel(93, 123, 21);
+    GreyscalePixel greyPixel;
+
+    greyPixel = ycbcrPixel;
+
+    REQUIRE(greyPixel.getPixel() == 93);
 }
