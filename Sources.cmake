@@ -33,4 +33,5 @@ set (sources
     src/mock.cpp
     src/color_pixel.cpp
     src/greyscale_pixel.cpp
+    src/ov7670.cpp
 )
