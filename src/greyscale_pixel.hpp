@@ -36,7 +36,12 @@ class GreyscalePixel {
      * @return Greyscale pixel with the greyscale value of the YCbCr pixel
      */
     GreyscalePixel &operator=(const YCbCr &rhs);
-
+    /**
+     * @brief Write greyscalepixel to hwlib::cout
+     *
+     * @param[in]     hwlib :: cout_using_uart_putc lhs    The definition of the hwlib cout
+     * @param[in]     GreyscalePixel rhs The pixel that must be printed.
+     */
     friend hwlib::cout_using_uart_putc &operator<<(hwlib::cout_using_uart_putc &lhs, const GreyscalePixel &rhs) {
         lhs << rhs.getPixel();
         return lhs;
