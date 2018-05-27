@@ -44,7 +44,7 @@ while(pinPollHREF.get() == true){
                 break;
             }
             while(1) {
-                if if (pinPollPLCK.get() == true);
+                if (pinPollPLCK.get() == true);
                 break;
 
             }
