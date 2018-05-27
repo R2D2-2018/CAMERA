@@ -7,6 +7,7 @@
 #ifndef IMAGE_HPP
 #define IMAGE_HPP
 #include "vector_2d.hpp"
+#include "wrap-hwlib.hpp"
 template <class T>
 class Image {
   private:
@@ -26,6 +27,16 @@ class Image {
     }
     int getHeight() {
         return sizeof pixels / sizeof pixels[0];
+    }
+    friend hwlib::cout_using_uart_putc &operator<<(hwlib::cout_using_uart_putc &lhs, Image<T> &rhs) {
+        for (int i = 0; i < rhs.getHeight(); i++) {
+            lhs << "\n";
+            for (int j = 0; j < rhs.getWidth(); j++) {
+                Vector2D position(i, j);
+                lhs << rhs.getPixel(position) << " ";
+            }
+        }
+        return lhs;
     }
 };
 

@@ -29,13 +29,14 @@ int main() {
 
     Vector2D position(5, 10);
 
-    hwlib::cout << image.getPixel(position).getPixel() << hwlib::endl;
-
     Image<YCbCr> plaatje;
-    hwlib::cout << plaatje.getPixel(position).getY() << hwlib::endl;
 
-    GreyscalePixel zwartplaatjel;
+    GreyscalePixel zwartpixel;
     YCbCr kleurplaatje = plaatje.getPixel(position);
-    zwartplaatjel = kleurplaatje;
+    zwartpixel = kleurplaatje;
+
+    Image<GreyscalePixel> zwartplaatje;
+    hwlib::cout << "Image:" << hwlib::endl;
+    hwlib::cout << zwartplaatje << hwlib::endl;
     return 0;
 }

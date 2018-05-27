@@ -6,6 +6,7 @@
  */
 #ifndef GREYSCALE_PIXEL_HPP
 #define GREYSCALE_PIXEL_HPP
+#include "wrap-hwlib.hpp"
 #include "ycbcr.hpp"
 class GreyscalePixel {
 
@@ -35,6 +36,11 @@ class GreyscalePixel {
      * @return Greyscale pixel with the greyscale value of the YCbCr pixel
      */
     GreyscalePixel &operator=(const YCbCr &rhs);
+
+    friend hwlib::cout_using_uart_putc &operator<<(hwlib::cout_using_uart_putc &lhs, const GreyscalePixel &rhs) {
+        lhs << rhs.getPixel();
+        return lhs;
+    }
 };
 bool operator==(const GreyscalePixel &lhs, const GreyscalePixel &rhs);
 #endif // GREYSCALE_PIXEL_HPP
