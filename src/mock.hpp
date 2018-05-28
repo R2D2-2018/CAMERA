@@ -16,18 +16,14 @@ class Mock : public Camera {
     Image<GreyscalePixel> takeGreyImage();
     /**
      * @brief Set the desired resolution as a vecotr2D.
-     * [BLANK]
      *
-     * [BLANK]
      * @param[in]     inputResolution  The desired resolution as a Vector@d.
      */
     Image<ColorPixel> takeColorImage();
     void setResolution(Vector2D inputResolution);
     /**
      * @brief Set the desired FPS.
-     * [BLANK]
      *
-     * [BLANK]
      * @param[in]     inputFPS    The desired FPS.
      */
     void setFPS(int inputFPS);

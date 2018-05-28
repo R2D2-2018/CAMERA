@@ -13,9 +13,9 @@ Image<GreyscalePixel> Mock::takeGreyImage() {
     Vector2D position;
     GreyscalePixel value;
     value.setPixel(10);
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < image.getHeight(); i++) {
         position.setX(i);
-        for (int j = 0; j < 10; j++) {
+        for (int j = 0; j < image.getWidth(); j++) {
             position.setY(j);
             image.setPixel(position, value);
         }

@@ -5,6 +5,7 @@
 #include "image.hpp"
 #include "mock.hpp"
 #include "vector_2d.hpp"
+#include "ycbcr.hpp"
 extern "C" void __cxa_pure_virtual() {
 
     hwlib::cout << "Virtual function error" << hwlib::endl;
@@ -28,7 +29,14 @@ int main() {
 
     Vector2D position(5, 10);
 
-    hwlib::cout << image.getPixel(position).getPixel() << hwlib::endl;
+    Image<YCbCr> plaatje;
 
+    GreyscalePixel zwartpixel;
+    YCbCr kleurplaatje = plaatje.getPixel(position);
+    zwartpixel = kleurplaatje;
+
+    Image<GreyscalePixel> zwartplaatje;
+    hwlib::cout << "Image:" << hwlib::endl;
+    hwlib::cout << zwartplaatje << hwlib::endl;
     return 0;
 }

@@ -1,5 +1,4 @@
 #include "color_pixel.hpp"
-
 ColorPixel::ColorPixel() {
 }
 
