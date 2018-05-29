@@ -6,12 +6,6 @@
 #include "mock.hpp"
 #include "vector_2d.hpp"
 #include "ycbcr.hpp"
-extern "C" void __cxa_pure_virtual() {
-
-    hwlib::cout << "Virtual function error" << hwlib::endl;
-    while (1)
-        ;
-}
 int main() {
     WDT->WDT_MR = WDT_MR_WDDIS;
 
@@ -24,8 +18,6 @@ int main() {
     camera.setResolution(resolution);
 
     camera.setFPS(421);
-
-    auto image = camera.takeGreyImage();
 
     Vector2D position(5, 10);
 
