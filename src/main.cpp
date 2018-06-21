@@ -1,19 +1,10 @@
-#include "wrap-hwlib.hpp"
+#include "pi_cam.hpp"
 
-#include "camera.hpp"
-#include "greyscale_pixel.hpp"
-#include "image.hpp"
-#include "mock.hpp"
-#include "vector_2d.hpp"
-#include "ycbcr.hpp"
 int main() {
-    WDT->WDT_MR = WDT_MR_WDDIS;
 
-    hwlib::wait_ms(1000);
-    Mock camera;
-    Vector2D position(5, 10);
-    Image<GreyscalePixel> plaatje = camera.takeGreyImage();
+    std::cout << "Hello world!" << std::endl;
+    PiCam cam("/home/pi/Documents/Build-Env/Build-environment/modules/CAMERA/binaries/Images/", Vector2D(640, 360), 30);
+    cam.setPath("/home/pi/Documents/Build-Env/Build-environment/modules/CAMERA/binaries/Videos/");
 
-    hwlib::cout << plaatje << hwlib::endl;
     return 0;
 }
