@@ -1,12 +1,12 @@
 #define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do this in one cpp file
-#include "../src/camera.cpp"
-#include "../src/color_pixel.cpp"
-#include "../src/greyscale_pixel.cpp"
-#include "../src/image.hpp"
-#include "../src/mock.cpp"
-#include "../src/vector_2d.cpp"
-#include "../src/ycbcr.cpp"
+#include "camera.hpp"
 #include "catch.hpp"
+#include "color_pixel.hpp"
+#include "greyscale_pixel.hpp"
+#include "image.hpp"
+#include "mock.hpp"
+#include "vector_2d.hpp"
+#include "ycbcr.hpp"
 
 TEST_CASE("Vector2D construct with x and y") {
     Vector2D vector(99, 21);
