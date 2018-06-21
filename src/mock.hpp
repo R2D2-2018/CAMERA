@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief     Header file for camera mock.
- * @author    Jari van Dam
+ * @author    Jari van Dam, Willem de Groot
  * @license   See LICENSE
  */
 #ifndef MOCK_HPP
@@ -13,19 +13,9 @@
 #include "vector_2d.hpp"
 class Mock : public Camera {
   public:
+    Mock(int fps, Vector2D resolution);
+    Mock();
     Image<GreyscalePixel> takeGreyImage();
-    /**
-     * @brief Set the desired resolution as a vecotr2D.
-     *
-     * @param[in]     inputResolution  The desired resolution as a Vector@d.
-     */
     Image<ColorPixel> takeColorImage();
-    void setResolution(Vector2D inputResolution);
-    /**
-     * @brief Set the desired FPS.
-     *
-     * @param[in]     inputFPS    The desired FPS.
-     */
-    void setFPS(int inputFPS);
 };
 #endif // MOCK_HPP

@@ -1,13 +1,20 @@
 /**
  * @file
  * @brief     implementations for mock class.
- * @author    Jari van Dam
+ * @author    Jari van Dam, Willem de Groot
  * @license   See LICENSE
  */
 #include "mock.hpp"
 #include "camera.hpp"
 #include "greyscale_pixel.hpp"
 #include "image.hpp"
+
+Mock::Mock(int fps, Vector2D resolution) : Camera(fps, resolution) {
+}
+
+Mock::Mock() : Camera() {
+}
+
 Image<GreyscalePixel> Mock::takeGreyImage() {
     Image<GreyscalePixel> image;
     Vector2D position;
@@ -22,14 +29,8 @@ Image<GreyscalePixel> Mock::takeGreyImage() {
     }
     return image;
 }
+
 Image<ColorPixel> Mock::takeColorImage() {
     Image<ColorPixel> image;
     return image;
-}
-void Mock::setResolution(Vector2D inputResolution) {
-    resolution = inputResolution;
-}
-
-void Mock::setFPS(int inputFPS) {
-    fps = inputFPS;
 }
