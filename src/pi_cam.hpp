@@ -7,9 +7,9 @@
 #ifndef PICAM_HPP
 #define PICAM_HPP
 
-#include <stdlib.h>
 #include "camera.hpp"
 #include "vector_2d.hpp"
+#include <stdlib.h>
 
 class PiCam : public Camera {
   private:
