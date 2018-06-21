@@ -1,18 +1,13 @@
 /**
  * @file
  * @brief     Implementations for 2d vector class.
- * @author    Jari van Dam
+ * @author    Jari van Dam, Willem de Groot, Arsalan Anwari
  * @license   See LICENSE
  */
 #include "vector_2d.hpp"
-Vector2D::Vector2D(const int inputX, const int inputY) {
-    x = inputX;
-    y = inputY;
+Vector2D::Vector2D(const int x, const int y) : x(x), y(y) {
 }
-Vector2D::Vector2D() {
-    x = 0;
-    y = 0;
-}
+
 int Vector2D::getX() const {
     return x;
 }
@@ -29,10 +24,12 @@ void Vector2D::setY(int inputY) {
     y = inputY;
 }
 
-bool operator==(const Vector2D &lhs, const Vector2D &rhs) {
-    if (lhs.getX() == rhs.getX() && lhs.getY() == rhs.getY()) {
-        return true;
-    } else {
-        return false;
-    }
+std::string Vector2D::print() {
+    std::stringstream result;
+    result << '(' << getX() << ',' << getY() << ')';
+    return result.str();
+}
+
+bool Vector2D::operator==(const Vector2D &rhs) const {
+    return (getX() == rhs.getX()) && (getY() == rhs.getY());
 }

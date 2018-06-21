@@ -1,11 +1,12 @@
+/**
+ * @file
+ * @brief     Implementation of YCbCr class
+ * @author    ???, Willem de Groot
+ * @license   See LICENSE
+ */
 #include "ycbcr.hpp"
-YCbCr::YCbCr() {
-    ;
-}
-YCbCr::YCbCr(int in_y, int in_cb, int in_cr) {
-    y = in_y;
-    cb = in_cb;
-    cr = in_cr;
+
+YCbCr::YCbCr(int in_y, int in_cb, int in_cr) : y(in_y), cb(in_cb), cr(in_cr) {
 }
 
 void YCbCr::setY(int in_y) {

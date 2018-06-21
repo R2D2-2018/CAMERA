@@ -6,10 +6,11 @@
  */
 #ifndef COLOR_PIXEL_HPP
 #define COLOR_PIXEL_HPP
+
 class ColorPixel {
 
   private:
-    int red = 0, green = 0, blue = 0;
+    int red, green, blue;
 
   public:
     ColorPixel();
@@ -18,7 +19,7 @@ class ColorPixel {
      *
      * @param[in]     valueOfPixel    new value of pixel
      */
-    void setRed(int valueOfPixel);
+    void setRed(const int valueOfPixel);
     /**
      * @brief return red intesity of the pixel
      *
@@ -30,7 +31,7 @@ class ColorPixel {
      *
      * @param[in]     valueOfPixel    new value of pixel
      */
-    void setBlue(int valueOfPixel);
+    void setBlue(const int valueOfPixel);
     /**
      * @brief return blue intesity of the pixel
      *
@@ -42,20 +43,21 @@ class ColorPixel {
      *
      * @param[in]     valueOfPixel    new value of pixel
      */
-    void setGreen(int valueOfPixel);
+    void setGreen(const int valueOfPixel);
     /**
      * @brief return green intesity of the pixel
      *
      * @return green intesity of the pixel
      */
     int getGreen() const;
+    /**
+     * @brief Operator== for two color pixels
+     *
+     * @param[in]     &lhs One colorpixel to compare.
+     * @param[in]     &rhs One colorpixel to compare/
+     * @return True if equal, else false.
+     */
+    bool operator==(const ColorPixel &rhs) const;
 };
-/**
- * @brief Operator== for two color pixels
- *
- * @param[in]     &lhs One colorpixel to compare.
- * @param[in]     &rhs One colorpixel to compare/
- * @return True if equal, else false.
- */
-bool operator==(const ColorPixel &lhs, const ColorPixel &rhs);
+
 #endif // COLOR_PIXEL_HPP

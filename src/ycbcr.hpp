@@ -1,19 +1,21 @@
+/**
+ * @file
+ * @brief     Header file of YCbCr class
+ * @author    ???, Willem de Groot
+ * @license   See LICENSE
+ */
+
 #ifndef YCBCR_HPP
 #define YCBCR_HPP
 
 #include "image.hpp"
 class YCbCr {
   private:
-    int y = 0;
-    int cb = 0;
-    int cr = 0;
+    int y;
+    int cb;
+    int cr;
 
   public:
-    /**
-     * @brief Default constructor for YCbCr class.
-     *
-     */
-    YCbCr();
     /**
      * @brief Simple constructor for YCbCr class.
      *
@@ -21,7 +23,7 @@ class YCbCr {
      * @param[in]     in_cb   Cb value.
      * @param[in]     in_cr   Cr value.
      */
-    YCbCr(int in_y, int in_cb, int in_cr);
+    YCbCr(int in_y = 0, int in_cb = 0, int in_cr = 0);
     /**
      * @brief Set the Y value.
      *

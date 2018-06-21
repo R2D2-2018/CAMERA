@@ -7,7 +7,6 @@
 #ifndef IMAGE_HPP
 #define IMAGE_HPP
 #include "vector_2d.hpp"
-#include "wrap-hwlib.hpp"
 template <class T>
 class Image {
   private:
@@ -45,7 +44,7 @@ class Image {
      * @return The width of the image.
      */
     int getWidth() {
-        return sizeof pixels[0] / sizeof(T);
+        return sizeof(pixels[0]) / sizeof(T);
     }
     /**
      * @brief Get the height of the image.
@@ -53,7 +52,7 @@ class Image {
      * @return The height of the image.
      */
     int getHeight() {
-        return sizeof pixels / sizeof pixels[0];
+        return sizeof(pixels) / sizeof(pixels[0]);
     }
     /**
      * @brief Print the image to the hwlib::cout.
@@ -62,7 +61,8 @@ class Image {
      * @param[in]     Image<T> rhs   The image that will be printed.
      * @return hwlib::cout_using_uart_putc The ostream so that it can be chained.
      */
-    friend hwlib::cout_using_uart_putc &operator<<(hwlib::cout_using_uart_putc &lhs, Image<T> &rhs) {
+    template <class C>
+    friend C &operator<<(C &lhs, Image<T> &rhs) {
         for (int i = 0; i < rhs.getHeight(); i++) {
             lhs << "\n";
             for (int j = 0; j < rhs.getWidth(); j++) {
