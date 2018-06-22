@@ -34,10 +34,10 @@ class Camera {
     }
     /**
      * @brief Get the resolution that is currently set.
-     * Usualy this function does not need implementation in derived function if the
+     * Usually this function does not need implementation in derived function if the
      * stored integer is fine.
      *
-     * @return The current resolution as a vector2d.
+     * @return The current resolution as a vector2D.
      */
     Vector2D getResolution() {
         return resolution;
