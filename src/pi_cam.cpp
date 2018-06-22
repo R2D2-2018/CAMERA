@@ -6,7 +6,7 @@
  */
 #include "pi_cam.hpp"
 
-PiCam::PiCam(const char *filePath, const Vector2D resolution, int fps) : Camera(fps, resolution), filePath(std::string(filePath)) {
+PiCam::PiCam(const char *filePath, const Vector2D resolution, int fps) : Camera(fps, resolution), filePath(std::string(filePath)), buffer(resolution.getX()*resolution.getY()*3) {
     correctPath();
 }
 
@@ -67,4 +67,24 @@ void PiCam::takeVideo(const char *name, const unsigned int &durationMs) {
     commandBuffer << "rm -rf " << filePath << name << ".h264";
     const char *result3 = commandBuffer.str().c_str();
     system(result3);
+}
+
+void PiCam::videoFeed() {
+	///< Open pipe to catch all output from raspivid
+	///< Execute command
+	///< Read all incoming data, convert to base64
+	///< Output converted data
+    std::stringstream command;
+    command << "raspivid -o -" << getSettings();
+    std::array<char, 128> localbuffer;
+
+    FILE* pipe = popen(command.str().c_str(), "r");
+    if (!pipe) {
+        std::cerr << "Couldn't run command." << std::endl;
+        return;
+    }
+    while(fgets(localbuffer.data(), 128, pipe) != NULL) {
+        buffer.push_back(*localbuffer.data());
+
+    }
 }

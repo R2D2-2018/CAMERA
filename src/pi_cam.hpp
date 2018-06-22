@@ -10,10 +10,13 @@
 #include "camera.hpp"
 #include "vector_2d.hpp"
 #include <stdlib.h>
+#include <vector>
+#include <array>
 
 class PiCam : public Camera {
   private:
     std::string filePath;
+    std::vector<char> buffer;
 
     void correctPath();
     void clearCommandBuffer(std::stringstream &parser);
@@ -28,6 +31,8 @@ class PiCam : public Camera {
 
     void takeImage(const char *name, const char *fileType);
     void takeVideo(const char *name, const unsigned int &durationMs);
+
+    void videoFeed();
 };
 
 #endif // PICAM_HPP
