@@ -7,16 +7,13 @@
 #include "pi_cam.hpp"
 
 PiCam::PiCam(const char *filePath, const Vector2D resolution, int fps)
-    : Camera(fps, resolution), filePath(std::string(filePath)), buffer(resolution.getX() * resolution.getY() * 3) {
+    : Camera(fps, resolution), filePath(filePath), buffer(resolution.getX() * resolution.getY() * 3) {
     correctPath();
 }
 
 void PiCam::correctPath() {
     if (filePath.back() != '/') {
         filePath += '/';
-    }
-    if (filePath[0] != '/') {
-        filePath.insert(0, 1, '/');
     }
 }
 
@@ -49,8 +46,7 @@ void PiCam::setPath(const char *newPath) {
 void PiCam::takeImage(const char *name, const char *fileType) {
     std::stringstream command;
     command << "raspistill -o " << filePath << name << "." << fileType;
-    const char *result = command.str().c_str();
-    system(result);
+    system(command.str().c_str());
 }
 
 void PiCam::takeVideo(const char *name, const unsigned int &durationMs) {
@@ -58,20 +54,18 @@ void PiCam::takeVideo(const char *name, const unsigned int &durationMs) {
 
     ///< Use the raspivid command to capture video with the supplied arguments
     commandBuffer << "raspivid -o " << filePath << name << ".h264" << getSettings() << " -t " << std::to_string(durationMs);
-    const char *result1 = commandBuffer.str().c_str();
+    system(commandBuffer.str().c_str());
     clearCommandBuffer(commandBuffer);
-    system(result1);
 
     ///< The framerate is not stored in the produced .h264 file, so we then convert it to mp4 with the correct framerate
     commandBuffer << "MP4Box -add " << filePath << name << ".h264"
                   << " -fps " << std::to_string(fps) << " " << filePath << name << ".mp4";
-    const char *result2 = commandBuffer.str().c_str();
+    system(commandBuffer.str().c_str());
     clearCommandBuffer(commandBuffer);
-    system(result2);
 
     commandBuffer << "rm -rf " << filePath << name << ".h264";
-    const char *result3 = commandBuffer.str().c_str();
-    system(result3);
+    system(commandBuffer.str().c_str());
+    clearCommandBuffer(commandBuffer);
 }
 
 void PiCam::videoFeed() {

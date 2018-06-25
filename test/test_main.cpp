@@ -105,8 +105,8 @@ TEST_CASE("Default values work", "[PiCam]") {
     REQUIRE(piCam.getFPS() == 30);
 }
 
-TEST_CASE("Path slashes are added", "[PiCam]") {
+TEST_CASE("Path slash is added", "[PiCam]") {
     PiCam piCam("home/pi/Documents", Vector2D(1280, 960));
 
-    REQUIRE(piCam.getPath() == std::string("/home/pi/Documents/"));
+    REQUIRE(piCam.getPath() == std::string("home/pi/Documents/"));
 }
