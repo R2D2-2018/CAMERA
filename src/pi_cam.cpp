@@ -1,12 +1,17 @@
+/**
+ * @file
+ * @brief     Implementation for Pi camera
+ * @author    Willem de Groot, Arsalan Anwari
+ * @license   See LICENSE
+ */
 #include "pi_cam.hpp"
 
-// namespace PiCam {
-
-PiCam::PiCam(const char *folderPath, const Vector2D resolution, int fps) : Camera(fps, resolution), folderPath(std::string(folderPath)) {
+Camera::PiCam::PiCam(const char *folderPath, const Vector2D resolution, int fps)
+    : Camera(fps, resolution), folderPath(std::string(folderPath)), buffer(resolution.getX() * resolution.getY() * 3) {
     correctPath();
 }
 
-void PiCam::correctPath() {
+void Camera::PiCam::correctPath() {
     if (folderPath.back() != '/') {
         folderPath += '/';
     }
@@ -15,36 +20,40 @@ void PiCam::correctPath() {
     }
 }
 
-void PiCam::clearCommandBuffer(std::stringstream &parser) {
+void Camera::PiCam::clearCommandBuffer(std::stringstream &parser) {
     parser.str(std::string());
     parser.clear();
 }
 
-std::string PiCam::getSettings() {
+std::string Camera::PiCam::getSettings() {
     std::stringstream result;
     result << " -fps " << fps << " -w " << resolution.getX() << " -h " << resolution.getY();
     return result.str();
 }
 
-void PiCam::printSettings() {
-    std::cout << "Resolution: " << resolution.print() << "\n"
-              << "FPS: " << fps << "\n"
+void Camera::PiCam::printSettings() {
+    std::cout << "Resolution: " << getResolution().print() << "\n"
+              << "FPS: " << getFPS() << "\n"
               << "Store locaction: " << folderPath << "\n";
 }
 
-void PiCam::setPath(const char *newPath) {
+std::string Camera::PiCam::getPath() {
+    return folderPath;
+}
+
+void Camera::PiCam::setPath(const char *newPath) {
     folderPath = std::string(newPath);
     correctPath();
 }
 
-void PiCam::takeImage(const char *name, const char *fileType) {
+void Camera::PiCam::takeImage(const char *name, const char *fileType) {
     std::stringstream command;
     command << "raspistill -o " << folderPath << name << "." << fileType;
     const char *result = command.str().c_str();
     system(result);
 }
 
-void PiCam::takeVideo(const char *name, const unsigned int &durationMs) {
+void Camera::PiCam::takeVideo(const char *name, const unsigned int &durationMs) {
     std::stringstream commandBuffer;
 
     ///< Use the raspivid command to capture video with the supplied arguments
@@ -65,13 +74,38 @@ void PiCam::takeVideo(const char *name, const unsigned int &durationMs) {
     system(result3);
 }
 
-std::string PiCam::takeFromStream(const char *name){
-	takeImage(name, "jpg");
+void Camera::PiCam::startVideoFeed(std::function<void(std::string&)> & processingTask) {
+	///< Open pipe to catch all output from raspivid
+	///< Execute command
+	///< Read all incoming data, convert to base64
+	///< Output converted data
+    std::stringstream command;
+    command << "raspivid -o -" << getSettings() << " -t 0";
+    std::vector<unsigned char> localBuffer(resolution.getX()*resolution.getY()*3);
+
+    FILE* pipe = popen(command.str().c_str(), "r");
+    if (!pipe) {
+        std::cerr << "Couldn't run command." << std::endl;
+        return;
+    }
+
+    bool running = true;
+    while( running ){
+        fread(&localBuffer[0] ,sizeof localBuffer[0], resolution.getX()*resolution.getY()*3, pipe);
+        std::string result = encoder.encode(localBuffer);
+        running = processingTask(result);
+        localBuffer.clear();
+    }
+    
+    pclose(pipe); 
+}
+
+
+std::string Camera::PiCam::takeEncodedVideoFrame(){
+    takeImage("1", "jpg");
 	
-	std::string filePath = folderPath + name + ".jpg";
+	std::string filePath = folderPath + "1" + ".jpg";
 	encoder.setFilePath(filePath);
 	return encoder.encode();
-	//return filePath;
-} 
 
-// }; // namespace PiCam
+}

@@ -2,14 +2,12 @@
 #define BASE64_ENCODER_HPP
 
 #include <string>
-//#include <cstring>
 #include <fstream>
-//#include <sstream>
-#include <iostream>
 #include <vector>
 #include <iterator>
 #include <algorithm>
 
+namespace Camera {
 static const std::string base64Chars = 
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 		"abcdefghijklmnopqrstuvwxyz"
@@ -32,12 +30,11 @@ public:
 	
 	void setFilePath(std::string & newFilePath);
 	std::string encode();
+	std::string encode(std::vector<unsigned char> & data);
 	
 	
 	
 };
-
+}
 
 #endif //BASE64_ENCODER_HPP
-
-
