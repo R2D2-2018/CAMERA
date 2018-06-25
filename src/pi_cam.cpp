@@ -6,7 +6,8 @@
  */
 #include "pi_cam.hpp"
 
-PiCam::PiCam(const char *filePath, const Vector2D resolution, int fps) : Camera(fps, resolution), filePath(std::string(filePath)), buffer(resolution.getX()*resolution.getY()*3) {
+PiCam::PiCam(const char *filePath, const Vector2D resolution, int fps)
+    : Camera(fps, resolution), filePath(std::string(filePath)), buffer(resolution.getX() * resolution.getY() * 3) {
     correctPath();
 }
 
@@ -31,9 +32,13 @@ std::string PiCam::getSettings() {
 }
 
 void PiCam::printSettings() {
-    std::cout << "Resolution: " << resolution.print() << "\n"
-              << "FPS: " << fps << "\n"
+    std::cout << "Resolution: " << getResolution().print() << "\n"
+              << "FPS: " << getFPS() << "\n"
               << "Store locaction: " << filePath << "\n";
+}
+
+std::string PiCam::getPath() {
+    return filePath;
 }
 
 void PiCam::setPath(const char *newPath) {
@@ -70,21 +75,20 @@ void PiCam::takeVideo(const char *name, const unsigned int &durationMs) {
 }
 
 void PiCam::videoFeed() {
-	///< Open pipe to catch all output from raspivid
-	///< Execute command
-	///< Read all incoming data, convert to base64
-	///< Output converted data
+    ///< Open pipe to catch all output from raspivid
+    ///< Execute command
+    ///< Read all incoming data, convert to base64
+    ///< Output converted data
     std::stringstream command;
     command << "raspivid -o -" << getSettings();
     std::array<char, 128> localbuffer;
 
-    FILE* pipe = popen(command.str().c_str(), "r");
+    FILE *pipe = popen(command.str().c_str(), "r");
     if (!pipe) {
         std::cerr << "Couldn't run command." << std::endl;
         return;
     }
-    while(fgets(localbuffer.data(), 128, pipe) != NULL) {
+    while (fgets(localbuffer.data(), 128, pipe) != NULL) {
         buffer.push_back(*localbuffer.data());
-
     }
 }

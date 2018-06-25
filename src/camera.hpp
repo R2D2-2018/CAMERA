@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief     Implementation for virtual class Camera.
- * @author    Jari van Dam
+ * @author    Jari van Dam, Willem de Groot
  * @license   See LICENSE
  */
 #ifndef CAMERA_HPP
@@ -20,14 +20,11 @@ class Camera {
   public:
     Camera(int fps = 30, Vector2D resolution = Vector2D(640, 480)) : fps(fps), resolution(resolution) {
     }
-    // Camera(){};
-    // virtual Image<GreyscalePixel> takeGreyImage() = 0;
-    // virtual Image<ColorPixel> takeColorImage() = 0;
     /**
      * @brief Set the desired resolution of the camera. Should be implemented
      * in the derived funcion.
      *
-     * @param[in]     resolution Desired resolution.
+     * @param[in]     newResolution Desired resolution.
      */
     virtual void setResolution(Vector2D newResolution) {
         resolution = newResolution;
@@ -37,7 +34,7 @@ class Camera {
      * Usually this function does not need implementation in derived function if the
      * stored integer is fine.
      *
-     * @return The current resolution as a vector2D.
+     * @return  Vector2D    The current resolution
      */
     Vector2D getResolution() {
         return resolution;
@@ -46,7 +43,7 @@ class Camera {
      * @brief Set the desired FPS(frames per second). Should be implemented in
      * the derived function.
      *
-     * @param[in]     fps    The desired FPS (frames per second)
+     * @param[in]     newFPS    The desired FPS (frames per second)
      */
     virtual void setFPS(int newFPS) {
         fps = newFPS;
@@ -54,7 +51,7 @@ class Camera {
     /**
      * @brief Get the FPS(frames per second that is currently set.
      *
-     * @return The current FPS).
+     * @return  int  The current FPS.
      */
     int getFPS() {
         return fps;

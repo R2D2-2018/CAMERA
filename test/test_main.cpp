@@ -1,12 +1,8 @@
 #define CATCH_CONFIG_MAIN // This tells Catch to provide a main() - only do this in one cpp file
 #include "camera.hpp"
 #include "catch.hpp"
-#include "color_pixel.hpp"
-#include "greyscale_pixel.hpp"
-#include "image.hpp"
-#include "mock.hpp"
+#include "pi_cam.hpp"
 #include "vector_2d.hpp"
-#include "ycbcr.hpp"
 
 TEST_CASE("Vector2D construct with x and y") {
     Vector2D vector(99, 21);
@@ -83,90 +79,34 @@ TEST_CASE("Vector2D set values two times in a row") {
     REQUIRE(vector.getY() == 9);
 }
 
-TEST_CASE("Camera mock set normal values") {
-    Mock camera;
-    Vector2D resolution;
-    resolution.setX(50);
-    resolution.setY(100);
-    camera.setResolution(resolution);
-    camera.setFPS(30);
+TEST_CASE("Settings correctly stored", "[PiCam]") {
+    PiCam piCam("/home/pi/Documents/", Vector2D(1280, 960), 60);
 
-    REQUIRE(camera.getResolution() == resolution);
-    REQUIRE(camera.getFPS() == 30);
+    REQUIRE(piCam.getPath() == std::string("/home/pi/Documents/"));
+    REQUIRE(piCam.getFPS() == 60);
+    REQUIRE(piCam.getResolution() == Vector2D(1280, 960));
 }
 
-TEST_CASE("Camera mock set negative values") {
-    Mock camera;
-    Vector2D resolution;
-    resolution.setX(-50);
-    resolution.setY(-100);
-    camera.setResolution(resolution);
-    camera.setFPS(-30);
+TEST_CASE("Settings correctly changed", "[PiCam]") {
+    PiCam piCam("/home/pi/Documents/", Vector2D(1280, 960), 60);
 
-    REQUIRE(camera.getResolution() == resolution);
-    REQUIRE(camera.getFPS() == -30);
+    piCam.setPath("/home/pi/Documents/new/");
+    piCam.setFPS(50);
+    piCam.setResolution(Vector2D(960, 720));
+
+    REQUIRE(piCam.getPath() == std::string("/home/pi/Documents/new/"));
+    REQUIRE(piCam.getFPS() == 50);
+    REQUIRE(piCam.getResolution() == Vector2D(960, 720));
 }
 
-TEST_CASE("testing colorImage") {
-    Image<ColorPixel> colorimage;
-    ColorPixel redPixel;
-    redPixel.setRed(127);
-    Vector2D coordinate;
-    coordinate.setX(10);
-    coordinate.setY(10);
-    colorimage.setPixel(coordinate, redPixel);
-    ColorPixel testPixel;
-    testPixel.setRed(127);
-    REQUIRE(colorimage.getPixel(coordinate) == testPixel);
-    testPixel.setGreen(200);
-    REQUIRE_FALSE(colorimage.getPixel(coordinate) == testPixel);
+TEST_CASE("Default values work", "[PiCam]") {
+    PiCam piCam("/home/pi/Documents/", Vector2D(1280, 960));
+
+    REQUIRE(piCam.getFPS() == 30);
 }
 
-TEST_CASE("testing GreyscaleImage") {
-    Image<GreyscalePixel> image;
-    GreyscalePixel pixel;
-    pixel.setPixel(95);
-    Vector2D coordinate;
-    coordinate.setX(5);
-    coordinate.setY(8);
-    image.setPixel(coordinate, pixel);
-    GreyscalePixel testPixel;
-    testPixel.setPixel(95);
-    REQUIRE(image.getPixel(coordinate) == testPixel);
-    testPixel.setPixel(200);
-    REQUIRE_FALSE(image.getPixel(coordinate) == testPixel);
-}
+TEST_CASE("Path slashes are added", "[PiCam]") {
+    PiCam piCam("home/pi/Documents", Vector2D(1280, 960));
 
-TEST_CASE("YCbCr default constructor", "[YCbCr]") {
-    YCbCr image;
-    image.setY(10);
-    image.setCb(12);
-    image.setCr(18);
-
-    REQUIRE(image.getY() == 10);
-    REQUIRE(image.getCb() == 12);
-    REQUIRE(image.getCr() == 18);
-}
-
-TEST_CASE("YCbCr constructor with values", "[YCbCr]") {
-    YCbCr image(5, 21, 231);
-
-    REQUIRE(image.getY() == 5);
-    REQUIRE(image.getCb() == 21);
-    REQUIRE(image.getCr() == 231);
-}
-
-TEST_CASE("Greypixel defautl constructor") {
-    GreyscalePixel greyPixel;
-    greyPixel.setPixel(12);
-
-    REQUIRE(greyPixel.getPixel() == 12);
-}
-TEST_CASE("YCbCr to Greyscale conversion", "[YCbCr],[Greyscale]") {
-    YCbCr ycbcrPixel(93, 123, 21);
-    GreyscalePixel greyPixel;
-
-    greyPixel = ycbcrPixel;
-
-    REQUIRE(greyPixel.getPixel() == 93);
+    REQUIRE(piCam.getPath() == std::string("/home/pi/Documents/"));
 }
