@@ -126,6 +126,6 @@ class PiCam : public Camera {
      */
     void startVideoFeed(std::function<bool(std::string &)> &processingTask);
 };
-}
+} // namespace Camera
 
 #endif // PICAM_HPP

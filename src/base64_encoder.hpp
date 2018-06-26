@@ -31,6 +31,6 @@ class Base64Encoder {
     std::string encode();
     std::string encode(std::vector<unsigned char> &data);
 };
-}
+} // namespace Camera
 
 #endif // BASE64_ENCODER_HPP

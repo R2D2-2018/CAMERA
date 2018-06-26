@@ -111,4 +111,4 @@ TEST_CASE("Path slash is added", "[PiCam]") {
 
     REQUIRE(piCam.getPath() == std::string("home/pi/Documents/"));
 }
-}
+} // namespace Camera

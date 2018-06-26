@@ -55,6 +55,6 @@ class Camera {
         return fps;
     }
 };
-}
+} // namespace Camera
 
 #endif // CAMERA_HPP
