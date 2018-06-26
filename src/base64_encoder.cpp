@@ -1,4 +1,10 @@
-#include "base64_encoder.hpp"
+/**
+ * @file
+ * @brief     Implementation for base64encoder
+ * @author    Arsalan Anwari
+ * @license   See LICENSE
+ */
+ #include "base64_encoder.hpp"
 
 Camera::Base64Encoder::Base64Encoder(std::string &filePath) : filePath(filePath) {
 }

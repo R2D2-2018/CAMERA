@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief     Header for base64encoder
+ * @author    Arsalan Anwari
+ * @license   See LICENSE
+ */
 #ifndef BASE64_ENCODER_HPP
 #define BASE64_ENCODER_HPP
 
