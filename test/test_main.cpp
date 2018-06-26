@@ -3,6 +3,7 @@
 #include "catch.hpp"
 #include "pi_cam.hpp"
 #include "vector_2d.hpp"
+
 namespace Camera {
 TEST_CASE("Vector2D construct with x and y") {
     Vector2D vector(99, 21);

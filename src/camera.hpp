@@ -8,6 +8,7 @@
 #define CAMERA_HPP
 
 #include "vector_2d.hpp"
+
 namespace Camera {
 class Camera {
   protected:
