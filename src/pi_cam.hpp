@@ -7,18 +7,24 @@
 #ifndef PICAM_HPP
 #define PICAM_HPP
 
+#include "base64_encoder.hpp"
 #include "camera.hpp"
-#include "vector_2d.hpp"
 #include <array>
+#include <functional>
 #include <stdlib.h>
 #include <vector>
 
+namespace Camera {
 class PiCam : public Camera {
   private:
     /**
+     * @brief The encoder used to convert image byte data to base64 string
+     */
+    Base64Encoder encoder;
+    /**
      * @brief The folder where produced files will be saved.
      */
-    std::string filePath;
+    std::string folderPath;
     /**
      * @brief A buffer to store a frame in.
      *
@@ -26,7 +32,7 @@ class PiCam : public Camera {
      * but this should contain a single frame
      * that needs to be converted to base64 and sent to the recipient.
      */
-    std::vector<char> buffer;
+    std::vector<unsigned char> buffer;
 
     /**
      * @brief Format a supplied path
@@ -61,7 +67,7 @@ class PiCam : public Camera {
      * @param[in] resolution  The resolution to record images with.
      * @param[in] fps The framerate to record video with. Default is 30.
      */
-    PiCam(const char *filePath, const Vector2D resolution, int fps = 30);
+    PiCam(const char *folderPath, const Vector2D resolution, int fps = 30);
     /**
      * @brief Display current settings for the camera
      *
@@ -105,11 +111,21 @@ class PiCam : public Camera {
     /**
      * @brief Creates a stream of video data
      *
-     * This function starts a video stream of undefined length (and converts it to base64).
-     * !This is not yet tested and not complete!
+     * This function takes an image and automaticly converts it to a base64 string.
+     * @warning It takes at least one second for the camera to retrieve a frame with this function
      *
      */
-    void videoFeed();
+    std::string takeEncodedVideoFrame();
+
+    /**
+     * @brief Creates a stream of video data
+     *
+     * This function starts a video stream of undefined length (and converts it to base64).
+     * User can input a processing function that perform as tasks with a base64 input string
+     *
+     */
+    void startVideoFeed(std::function<bool(std::string &)> &processingTask);
 };
+} // namespace Camera
 
 #endif // PICAM_HPP

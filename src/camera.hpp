@@ -9,6 +9,7 @@
 
 #include "vector_2d.hpp"
 
+namespace Camera {
 class Camera {
   protected:
     int fps;
@@ -54,5 +55,6 @@ class Camera {
         return fps;
     }
 };
+} // namespace Camera
 
 #endif // CAMERA_HPP

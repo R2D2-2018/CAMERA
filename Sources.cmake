@@ -13,4 +13,5 @@ include_directories (${catch}/single_include)
 set (sources
     src/vector_2d.cpp
     src/pi_cam.cpp
+    src/base64_encoder.cpp
 )
