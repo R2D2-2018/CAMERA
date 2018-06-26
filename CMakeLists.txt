@@ -15,7 +15,7 @@ endif (build_environment)
 
 set (CMAKE_TOOLCHAIN_FILE ${toolchain}/compilers/host-gcc.cmake)
 
-project (camera CXX)
+project (template-pc CXX)
 
 include (Sources.cmake)
 
