@@ -7,20 +7,19 @@
 #ifndef PICAM_HPP
 #define PICAM_HPP
 
-#include "camera.hpp"
-#include "vector_2d.hpp"
 #include "base64_encoder.hpp"
+#include "camera.hpp"
 #include <array>
+#include <functional>
 #include <stdlib.h>
 #include <vector>
-#include <functional>
 
 namespace Camera {
 class PiCam : public Camera {
   private:
     /**
      * @brief The encoder used to convert image byte data to base64 string
-     */   
+     */
     Base64Encoder encoder;
     /**
      * @brief The folder where produced files will be saved.
@@ -33,7 +32,7 @@ class PiCam : public Camera {
      * but this should contain a single frame
      * that needs to be converted to base64 and sent to the recipient.
      */
-    std::vector<char> buffer;
+    std::vector<unsigned char> buffer;
 
     /**
      * @brief Format a supplied path
@@ -111,22 +110,21 @@ class PiCam : public Camera {
     void takeVideo(const char *name, const unsigned int &durationMs);
     /**
      * @brief Creates a stream of video data
-     * 
+     *
      * This function takes an image and automaticly converts it to a base64 string.
      * @warning It takes at least one second for the camera to retrieve a frame with this function
-     * 
+     *
      */
     std::string takeEncodedVideoFrame();
-    
+
     /**
      * @brief Creates a stream of video data
-     * 
+     *
      * This function starts a video stream of undefined length (and converts it to base64).
      * User can input a processing function that perform as tasks with a base64 input string
-     * 
+     *
      */
-    void startVideoFeed(std::function<void(std::string&)> & processingTask);
-
+    void startVideoFeed(std::function<bool(std::string &)> &processingTask);
 };
 }
 
