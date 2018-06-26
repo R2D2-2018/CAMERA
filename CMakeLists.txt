@@ -13,13 +13,9 @@ set (build_environment ../..)
 set (toolchain ../../toolchain)
 endif (build_environment)
 
-if (NOT ${test_build})
-set (CMAKE_TOOLCHAIN_FILE ${toolchain}/compilers/arm-none-eabi.cmake)
-else (NOT ${test_build})
 set (CMAKE_TOOLCHAIN_FILE ${toolchain}/compilers/host-gcc.cmake)
-endif (NOT ${test_build})
 
-project (arduino-template CXX)
+project (template-pc CXX)
 
 include (Sources.cmake)
 

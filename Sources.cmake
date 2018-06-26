@@ -11,5 +11,6 @@ include_directories (${catch}/single_include)
 # Source Files:
 
 set (sources
-
+    src/vector_2d.cpp
+    src/pi_cam.cpp
 )

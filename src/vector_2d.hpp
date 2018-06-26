@@ -1,32 +1,29 @@
 /**
  * @file
  * @brief     Header file for 2d vector class.
- * @author    Jari van Dam
+ * @author    Jari van Dam, Willem de Groot, Arsalan Anwari
  * @license   See LICENSE
  */
 #ifndef VECTOR_2D_HPP
 #define VECTOR_2D_HPP
 
+#include <iostream>
+#include <sstream>
+#include <string>
+
 class Vector2D {
   private:
-    int x = 0;
-    int y = 0;
+    int x;
+    int y;
 
   public:
     /**
-     * @brief Default constructor for Vector2D.
-     *
-     *  Initializes with x and y set to 0.
-     *
-     */
-    Vector2D();
-    /**
-     * @brief Vector2d constructor with x and y value.
+     * @brief Vector2D constructor with x and y value.
      *
      * @param[in]     x    X value
      * @param[in]     y    Y value
      */
-    Vector2D(const int x, const int y);
+    Vector2D(const int x = 0, const int y = 0);
     /**
      * @brief Return the x coordinate.
      *
@@ -51,7 +48,12 @@ class Vector2D {
      * @param[in] inputY  The desired y value.
      */
     void setY(int inputY);
+
+    std::string print();
+
+    // friend std::ostream& operator<<(std::ostream& os, const Vector2D & rhs);
+
+    bool operator==(const Vector2D &rhs) const;
 };
 
-bool operator==(const Vector2D &lhs, const Vector2D &rhs);
 #endif // VECTOR_2D_HPP

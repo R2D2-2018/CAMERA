@@ -4,14 +4,8 @@ include (${build_environment}/flags.cmake)
 
 include_directories (src/)
 
-add_definitions (-DBMPTK_TARGET_test
-                 -DBMPTK_TARGET=test
-                 -DBMPTK_BAUDRATE=19200)
-
 set (sources ${sources}
     ${unit_test_main}
-    src/wrap-hwlib.cpp
-    src/libc-stub.cpp
 )
 
 set (build_test build_test)
