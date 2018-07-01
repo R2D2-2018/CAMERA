@@ -48,11 +48,17 @@ class Vector2D {
      * @param[in] inputY  The desired y value.
      */
     void setY(int inputY);
-
+    /**
+     * @brief returns a string representation of the current values.
+     *
+     * @return    std::string representation of the current values.
+     */
     std::string print();
-
-    // friend std::ostream& operator<<(std::ostream& os, const Vector2D & rhs);
-
+    /**
+     * @brief comparison operator implementation for the Vector2D class.
+     *
+     * @return    bool    whether or not the values of both vectors are the same.
+     */
     bool operator==(const Vector2D &rhs) const;
 };
 

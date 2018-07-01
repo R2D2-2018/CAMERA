@@ -9,7 +9,6 @@
 
 #include "base64_encoder.hpp"
 #include "camera.hpp"
-#include <array>
 #include <functional>
 #include <stdlib.h>
 #include <vector>
